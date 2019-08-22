@@ -34,6 +34,7 @@ namespace QnAPrompting.Dialogs
             if (prompts == null || prompts.Length < 1)
             {
                 outputActivity = MessageFactory.Text(qnaAnswer);
+              
             }
             else
             {
@@ -44,6 +45,7 @@ namespace QnAPrompting.Dialogs
                     PreviousUserQuery = query
                 };
 
+    
                 outputActivity = CardHelper.GetHeroCard(qnaAnswer, prompts);
             }
 

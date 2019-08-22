@@ -30,14 +30,19 @@ namespace QnAPrompting.Helpers
                         Value = prompt.DisplayText,
                         Type =  ActionTypes.ImBack,
                         Title = prompt.DisplayText,
+                     
+
                     });
             }
 
             var plCard = new HeroCard()
             {
-                Title = cardTitle,
+
+                Text = cardTitle,
                 Subtitle = string.Empty,
                 Buttons = buttons
+         
+
             };
 
             var attachment = plCard.ToAttachment();
