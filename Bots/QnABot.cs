@@ -35,14 +35,9 @@ namespace QnAPrompting.Bots
                 // Greet anyone that was not the target (recipient) of this message.
                 if (member.Id != turnContext.Activity.Recipient.Id)
                 {
-                    await turnContext.SendActivityAsync(MessageFactory.Text($"Hola, soy el asesor virtual Finesa"), cancellationToken);
-                    await turnContext.SendActivityAsync(MessageFactory.Text($"Puedo asesorarlo con los siguientes temas:"), cancellationToken);
-                    await turnContext.SendActivityAsync(MessageFactory.Text($"Saldo total"), cancellationToken);
-                    await turnContext.SendActivityAsync(MessageFactory.Text($"Pago a través de nuestro portal web"), cancellationToken);
-                    await turnContext.SendActivityAsync(MessageFactory.Text($"Levantamiento de prenda"), cancellationToken);
-                    await turnContext.SendActivityAsync(MessageFactory.Text($"Paz y salvo"), cancellationToken);
-                    await turnContext.SendActivityAsync(MessageFactory.Text($"Estado de cuenta / Factura"), cancellationToken);
-                    await turnContext.SendActivityAsync(MessageFactory.Text($"Endoso de póliza"), cancellationToken);
+                    await turnContext.SendActivityAsync(MessageFactory.Text($"Hola, soy el asesor virtual Finesa, puedo asesorarlo con los siguientes temas: "), cancellationToken);
+                    await turnContext.SendActivityAsync(MessageFactory.Text($"Saldo total \r\n Pago a través de nuestro portal web \r\n Levantamiento de prenda \r\n Paz y salvo \r\n Estado de cuenta / Factura \r\n Endoso de póliza "), cancellationToken);
+                    await turnContext.SendActivityAsync(MessageFactory.Text($"Pregúnteme por alguno de estos temas y con gusto responderé"), cancellationToken);
                    
                 }
             }
