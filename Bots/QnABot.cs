@@ -25,7 +25,9 @@ namespace QnAPrompting.Bots
         public QnABot(ConversationState conversationState, UserState userState, IQnAService qnaService, ILogger<QnABot> logger)
              : base(conversationState, userState, new QnADialog(qnaService), logger)
         {
+
         }
+
 
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -38,9 +40,9 @@ namespace QnAPrompting.Bots
                     await turnContext.SendActivityAsync(MessageFactory.Text($"Hola, soy el asesor virtual Finesa, puedo asesorarlo con los siguientes temas: "), cancellationToken);
                     await turnContext.SendActivityAsync(MessageFactory.Text($"Saldo total \r\n Pago a través de nuestro portal web \r\n Levantamiento de prenda \r\n Paz y salvo \r\n Estado de cuenta / Factura \r\n Endoso de póliza \r\n Reporte de pagos aplicados"), cancellationToken);
                     await turnContext.SendActivityAsync(MessageFactory.Text($"Pregúnteme por alguno de los anteriores y con gusto responderé"), cancellationToken);
-                   
-                }
 
+                }
+                
 
             }
         }

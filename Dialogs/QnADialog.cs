@@ -33,19 +33,21 @@ namespace QnAPrompting.Dialogs
             
             if (prompts == null || prompts.Length < 1)
             {
-                outputActivity = MessageFactory.Text(qnaAnswer);
+                outputActivity = MessageFactory.Text("No sé como responder a su pregunta");
               
             }
             else
             {
+              
                 // Set bot state only if prompts are found in QnA result
                 newState = new QnABotState
                 {
                     PreviousQnaId = qnaResult[0].Id,
                     PreviousUserQuery = query
-                };
+                    
+            };
 
-    
+                
                 outputActivity = CardHelper.GetHeroCard(qnaAnswer, prompts);
             }
 
