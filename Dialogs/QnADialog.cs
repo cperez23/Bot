@@ -33,7 +33,7 @@ namespace QnAPrompting.Dialogs
             
             if (prompts == null || prompts.Length < 1)
             {
-                outputActivity = MessageFactory.Text("No sé puedo responder a su pregunta, solo a temas relacionados con:\r\n Saldo total \r\n Pago a través de nuestro portal web \r\n Levantamiento de prenda \r\n Paz y salvo \r\n Estado de cuenta / Factura \r\n Endoso de póliza \r\n Reporte de pagos aplicados.\r\n Si me pregunta por alguno de los anteriores podre responder con gusto.");
+                outputActivity = MessageFactory.Text("No sé puedo responder a su pregunta, solo a temas relacionados con:\r\n \r\n Saldo total \r\n Pago a través de nuestro portal web \r\n Levantamiento de prenda \r\n Paz y salvo \r\n Estado de cuenta / Factura \r\n Endoso de póliza \r\n Reporte de pagos aplicados.\r\n \r\n Si me pregunta por alguno de los anteriores podre responder con gusto.");
               
             }
             else
