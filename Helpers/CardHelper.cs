@@ -31,7 +31,6 @@ namespace QnAPrompting.Helpers
                         Type =  ActionTypes.ImBack,
                         Title = prompt.DisplayText,
                      
-
                     });
             }
 
@@ -41,7 +40,6 @@ namespace QnAPrompting.Helpers
                 Text = cardTitle,
                 Subtitle = string.Empty,
                 Buttons = buttons
-         
 
             };
 
